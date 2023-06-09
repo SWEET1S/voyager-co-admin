@@ -22,7 +22,7 @@
         "laravel": {
             "providers": [
                 "Sweet1s\\VoyagerCoAdmin\\Providers\\VoyagerCoAdminServiceProvider"
-            ],
+            ]
         }
     }
 }
