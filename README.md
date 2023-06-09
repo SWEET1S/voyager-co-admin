@@ -7,12 +7,16 @@ The **"voyager-co-admin"** package is designed specifically for the **Laravel Vo
 By utilizing **"voyager-co-admin"**, administrators can have granular control over role management within the Voyager Admin Panel. The package enables a hierarchical role structure where designated roles with the appropriate permissions can create and assign roles to other users, ensuring the seamless delegation of access privileges.
 
 ### Installation
+1. Install Laravel Voyager Admin Panel 1.6:
+    ```bash
+    composer require tcg/voyager "^1.6"
+    ```
 
-1. Install the package via composer:
+2. Install the package via composer:
     ```bash
     composer require sweet1s/voyager-co-admin
     ```
-2. Publish the package's assets:
+3. Publish the package's assets:
     ```bash
     php artisan vendor:publish --provider="Sweet1s\VoyagerCoAdmin\Providers\VoyagerCoAdminServiceProvider"
     ```
