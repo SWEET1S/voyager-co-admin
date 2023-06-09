@@ -3,9 +3,10 @@
     "description": "Voyager Co Admin",
     "keywords": ["voyager", "laravel", "admin", "co-admin"],
     "license": "MIT",
+    "type": "library",
     "autoload": {
         "psr-4": {
-            "Sweet1s\\VoyagerCoAdmin\\": "src/"
+            "Sweet1s\\VoyagerCoAdmin\\": "src"
         }
     },
     "authors": [
