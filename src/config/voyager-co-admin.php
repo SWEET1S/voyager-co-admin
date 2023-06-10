@@ -10,8 +10,5 @@ return [
     /*
      * The roles that will not be available for display or selection on user or editing pages.
      */
-    "hidden_roles" => [
-        "admin",
-        "user"
-    ],
+    "hidden_roles" => [],
 ];

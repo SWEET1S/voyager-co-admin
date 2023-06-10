@@ -3,6 +3,8 @@
 namespace Sweet1s\VoyagerCoAdmin\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Sweet1s\VoyagerCoAdmin\Console\Commands\InstallCommand;
+use Sweet1s\VoyagerCoAdmin\Console\Commands\RolePermissionCommand;
 
 class VoyagerCoAdminServiceProvider extends ServiceProvider
 {
@@ -33,5 +35,12 @@ class VoyagerCoAdminServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/voyager-co-admin.php' => config_path('voyager-co-admin.php'),
         ]);
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                RolePermissionCommand::class,
+                InstallCommand::class
+            ]);
+        }
     }
 }
