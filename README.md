@@ -23,7 +23,13 @@ By utilizing **"voyager-co-admin"**, administrators can have granular control ov
     ```bash
     php artisan vendor:publish --provider="Sweet1s\VoyagerCoAdmin\Providers\VoyagerCoAdminServiceProvider"
     ```
-   
+
+## Features
+
+- [x] Display the permissions granted by the superuser (root or admin) in the Voyager Admin Panel.
+- [x] Enable a hierarchical role structure where designated roles with the appropriate permissions can create and assign roles to other users.
+- [X] Hide roles that should not be visible to other users when editing users.
+- [x] Ensure the seamless delegation of access privileges.
 
 ## Before
 
@@ -36,5 +42,7 @@ In the regular usage of Voyager Admin Panel, when creating a role with limited c
 With the **"voyager-co-admin"** package, the role will only be able to see the permissions that they themselves possess.
 
 ![After](./.docs/images/after__using.jpg)
+
+
 
 
