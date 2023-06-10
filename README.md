@@ -15,13 +15,13 @@ By utilizing **"voyager-co-admin"**, administrators can have granular control ov
 > You should fully install the package [Voyager](https://github.com/the-control-group/voyager) before.
 ---
 
-1. Install the package via composer:
+1. Require the Package:
     ```bash
     composer require sweet1s/voyager-co-admin
     ```
-2. Publish the package's assets:
+2. Run The Installer:
     ```bash
-    php artisan vendor:publish --provider="Sweet1s\VoyagerCoAdmin\Providers\VoyagerCoAdminServiceProvider"
+    php artisan co-admin:install
     ```
 
 ## Features
@@ -30,18 +30,25 @@ By utilizing **"voyager-co-admin"**, administrators can have granular control ov
 - [x] Enable a hierarchical role structure where designated roles with the appropriate permissions can create and assign roles to other users.
 - [X] Hide roles that should not be visible to other users when editing users.
 - [x] Ensure the seamless delegation of access privileges.
+- [X] Manage who can give out certain roles and who can't
 
 ## Before
 
 In the regular usage of Voyager Admin Panel, when creating a role with limited capabilities, the role will still be able to see all existing permissions.
 
-![Before](./.docs/images/before__using.jpg)
+_Admin Role view_
+![BeforeAdmin](./.docs/images/before__admin__view.jpg)
+_Moderator role view_
+![BeforeModerator](./.docs/images/before__moderator__view.jpg)
 
 ## After
 
 With the **"voyager-co-admin"** package, the role will only be able to see the permissions that they themselves possess.
 
-![After](./.docs/images/after__using.jpg)
+_Admin role view_
+![BeforeAdmin](./.docs/images/after__admin__view.jpg)
+_Moderator role view_
+![BeforeModerator](./.docs/images/after__moderator__view.jpg)
 
 
 

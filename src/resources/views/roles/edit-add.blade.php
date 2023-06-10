@@ -89,6 +89,10 @@
                                         @endif
                                     @endif
 
+                                    @if(!config('voyager-co-admin.running') && $table == "can_give")
+                                        @continue
+                                    @endif
+
                                     <li>
                                         <input type="checkbox" id="{{$table}}" class="permission-group">
                                         <label

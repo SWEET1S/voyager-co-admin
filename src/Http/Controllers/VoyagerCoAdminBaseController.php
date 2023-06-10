@@ -117,15 +117,21 @@ class VoyagerCoAdminBaseController
                 }
 
                 $hiddenRoles = config('voyager-co-admin.hidden_roles', []);
+                $currentPermissions = auth()->user()->role->permissions->pluck('key')->toArray();
 
                 foreach ($relationshipOptions as $relationshipOption) {
-                    if (in_array($relationshipOption->name, $hiddenRoles) && $this->running) {
+                    if (
+                        in_array($relationshipOption->name, $hiddenRoles) && $this->running
+                    ) {
                         continue;
                     }
-                    $results[] = [
-                        'id'   => $relationshipOption->{$options->key},
-                        'text' => $relationshipOption->{$options->label},
-                    ];
+
+                    if(in_array("can_give_{$relationshipOption->name}", $currentPermissions)){
+                        $results[] = [
+                            'id'   => $relationshipOption->{$options->key},
+                            'text' => $relationshipOption->{$options->label},
+                        ];
+                    }
                 }
 
                 return response()->json([
