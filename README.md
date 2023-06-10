@@ -27,14 +27,12 @@ By utilizing **"voyager-co-admin"**, administrators can have granular control ov
 
 ## Before
 
----
 In the regular usage of Voyager Admin Panel, when creating a role with limited capabilities, the role will still be able to see all existing permissions.
 
 ![Before](./.docs/images/before__using.jpg)
 
 ## After
 
----
 With the **"voyager-co-admin"** package, the role will only be able to see the permissions that they themselves possess.
 
 ![After](./.docs/images/after__using.jpg)
