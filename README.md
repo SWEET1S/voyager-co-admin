@@ -10,8 +10,7 @@ By utilizing **"voyager-co-admin"**, administrators can have granular control ov
 
 
 > #### Requirement
-> Laravel: v8+ or v9+  
-> Voyager: v1.6+  
+> Voyager: v1.5+  
 > You should fully install the package [Voyager](https://github.com/the-control-group/voyager) before.
 ---
 
