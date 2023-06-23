@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "tcg/voyager": "^1.6.0"
+        "tcg/voyager": "^1.5.0"
     },
     "require-dev": {
         "laravel/framework": "^8.0|~9.0"
